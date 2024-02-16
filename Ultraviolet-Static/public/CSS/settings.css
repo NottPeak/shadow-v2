@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #6B52A3;
+  --secondary-color: #2e2e4c;
+  --background-color: #1a1a2b;
+  --text-color: #fff;
+  --hover-color: #45A049;
+  --font-family-primary: "Comfortaa", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
+  --font-size-base: 16px;
+  --font-size-title: 24px;
+  --font-weight-bold: bold;
+  --border-radius: 5px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.settings-section {
+  flex: 0 0 calc(30.33% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  vertical-align: top;
+  transition: transform 0.3s;
+}
+
+.settings-section:hover {
+  transform: translateY(-5px);
+}
+
+.settings-section-wide {
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  vertical-align: top;
+  transition: transform 0.3s;
+}
+
+.settings-section-wide:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  margin-top: -10px;
+}
+
+.section-content {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.icon-button {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: opacity 0.3s;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+.input-field {
+  font-size: var(--font-size-base);
+  padding: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  width: 95%;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS styles */
+.box {
+  width: 200px;
+  max-height: 105px;
+  margin-right: 20px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden; /* Ensure content doesn't exceed the maximum height */
+}
+
+.box-header {
+  font-family: var(--font-family-secondary);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.box-header h3 {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.box-content {
+  padding: 5px 5px;
+}
+
+.tag {
+  font-family: var(--font-family-secondary);
+  font-size: 14px;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.online-text {
+  font-family: var(--font-family-secondary);
+  font-size: 14px;
+}
+
+.setbare {
+  font-family: var(--font-family-secondary);
+  font-size: 14px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  padding: 1.5px 3px;
+  text-align: center;
+  border: none;
+  margin: 0 auto; /* Center the button horizontally */
+  border-radius: var(--border-radius);
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.setbare:hover {
+  background-color: var(--hover-color);
+}

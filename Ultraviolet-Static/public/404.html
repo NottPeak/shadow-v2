@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html id="html">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sys Error</title>
+    <meta name="googlebot" content="noindex, nofollow, nosnippet" />
+    <base href="/" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .logo-wrapper {
+        margin-left: 20px;
+      }
+
+      .desc {
+        margin-left: 20px;
+      }
+
+      #uv-error {
+        color: red;
+      }
+
+      #uv-error-code {
+        font-family: monospace;
+      }
+
+      #uv-register-sw {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+      }
+
+      footer a {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+
+  <body style="background-size: cover; background-size: 100vmax 100vmax;">
+    <div class="logo-wrapper">
+      <center> <h1 style="text-align: center;">Proxy | Error</h1> </center>
+    </div>
+    <div class="desc">
+      <p style="font-size: 22px;"> The server could not route your request.</p>
+      <p id="uv-error"></p>
+      <code id="uv-error-code"></code>
+      <button  id="uv-register-sw" value="Register service worker">
+        Register ServiceWorker
+      </button> <br> <br>
+      <p>If this error persists, you can get suport <a href="https://discord.gg/p9h3dTHAMA" style="color:red; font-weight: bold;text-decoration: none; bottom:0;">HERE</a></p>
+    </div>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <script src="register-sw.js"></script>
+    <script src="error.js"></script>
+  </body>
+<div id="custom-menu">
+  <ul>
+    <div id="section">
+      <li onclick="copy()"><a><i class="fa-solid fa-copy"></i>Copy</a></li>
+      <li onclick="paste()"><a><i class="fa-solid fa-paste"></i> Paste</a></li>
+      <li onclick="selectAll()"><a><i class="fa-sharp fa-solid fa-border-all"></i>Select All</a></li>
+    </div>
+    <div id="section">
+      <li onclick="openSettings()"><a><i class="fa-sharp fa-solid fa-gear fa-lg" id="settings"></i>Open Settings</a></li>
+      <li onclick="openDiscord()"><a><i class="fa-brands fa-discord fa-lg"></i>Open Discord</a></li>
+      <li onclick="openIframeInNewTab()"><a><i class="fa-solid fa-arrow-up-right-from-square fa-lg" id="openiframe"></i>Open Tab Content In A New Tab</a></li>
+      <li onclick="devtooltoggle()"><a><i class="fa-solid fa-wrench fa-lg" id="devbtn"></i>Toggle Dev Tools</a></li>    
+    </div>
+    <div id="section">
+      <li onclick="openNewTab()"><a><i class="fa-solid fa-lock"></i>Launch About:Blank in New Tab</a></li>
+      <li onclick="openNewWindow()"><a><i class="fa-solid fa-lock"></i>Launch About:Blank in New Window</a></li>
+    </div>
+    <div id="section">
+      <li onclick="navigateForward()"><a><i class="fa-sharp fa-solid fa-arrow-right fa-lg" id="forward"></i>Forward</a></li>
+      <li onclick="navigateBack()"><a><i class="fa-solid fa-arrow-left fa-lg" id="back"></i> Back</a></li>
+      <li onclick="reloadIframe()"><a><i class="fa-solid fa-rotate-right fa-lg" id="reload"></i>Reload</a></li>
+    </div>
+    <div id="section">
+      <li onclick="Fullscreen()"><a> <i class="fa-solid fa-expand fa-lg" id="full-btn"></i>Fullscreen </a></li>
+    </div>
+  </ul>
+</div>
+<div id="content"></div>
+<script src="menu.js"> </script>
+<script src="tab.js"> </script>
+<script>
+      let toggleState = false;
+    function devtooltoggle() {
+      if (toggleState) {
+        eruda.hide();
+        eruda.destroy();
+      } else {
+        var script = document.createElement('script');
+        script.src = "//cdn.jsdelivr.net/npm/eruda";
+        document.body.appendChild(script);
+        script.onload = function () {
+          eruda.init();
+          eruda.show();
+      }}
+      toggleState = !toggleState;
+    };
+
+function Fullscreen() {
+  const canvas = document.getElementById('html');
+  if (canvas.requestFullscreen) {
+    canvas.requestFullscreen();
+  } else if (canvas.mozRequestFullScreen) {
+    canvas.mozRequestFullScreen();
+  } else if (canvas.webkitRequestFullscreen) {
+    canvas.webkitRequestFullscreen();
+  } else if (canvas.msRequestFullscreen) {
+    canvas.msRequestFullscreen();
+  }
+}
+
+
+function navigateForward() {
+  window.history.forward();
+}
+
+
+function navigateBackward() {
+  window.history.back();
+}
+
+
+function reloadIframe() {
+  location.reload();
+}
+
+function openDiscord() {
+ location.href = '/uv/service/hvtrs8%2F-dksaopd%2Ccmm-ilvktg%2Fr9j3fTJAOA';
+}
+
+function openIframeInNewTab() {
+    const iframeSrc = location.href;
+    window.open(iframeSrc, '_blank');
+  }
+
+
+function openSettings() {
+  window.location.href="/settings/"
+}
+
+function openNewTab() {
+    const currentURL = window.location.href;
+    const newTab = window.open('about:blank', '_blank');
+    newTab.document.write('<html><body style="margin: 0; padding: 0;"><embed src="' + currentURL + '" style="width: 100%; height: 100%;"></embed></body></html>');
+    newTab.document.close();
+  }
+  
+  function openNewWindow() {
+    const currentURL = window.location.href;
+    const newWindow = window.open('about:blank', '_blank', 'width=800,height=600');
+    newWindow.document.write('<html><body style="margin: 0; padding: 0;"><embed src="' + currentURL + '" style="width: 100%; height: 100%;"></embed></body></html>');
+    newWindow.document.close();
+  }
+  
+</script>
+
+<script>
+  document.getElementById("uv-address").addEventListener("input", function() {
+  this.suggestions = [];
+});
+
+</script> 
+</html>
