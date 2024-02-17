@@ -1,20 +1,21 @@
 :root {
-  --primary-background-color: #1a1a2b;
-  --secondary-background-color: #2a2a3d;
-  --accent-color: #5B3A75;
+  --primary-background-color: #0f0f17;
+  --secondary-background-color: #1a1a2b;
+  --accent-color: #E53935;
   --main-text-color: #fff;
-  --search-placeholder-color: #999;
-  --bookmark-background-color: #6B52A3;
-  --bookmark-hover-background-color: #5B3A75;
+  --search-placeholder-color: #ccc;
+  --bookmark-background-color: #5E35B1;
+  --bookmark-hover-background-color: #7E57C2;
   --input-background-color: #1a1a2b;
   --input-text-color: #fff;
-  --input-placeholder-color: #ccc;
-  --button-background-color: #6B52A3;
+  --input-placeholder-color: #999;
+  --button-background-color: #5E35B1;
   --button-text-color: #fff;
-  --button-hover-background-color: #8F6CAF;
-  --cancel-button-background-color: #4C2C63;
-  --save-button-background-color: #3A9259;
+  --button-hover-background-color: #7E57C2;
+  --cancel-button-background-color: #D32F2F;
+  --save-button-background-color: #43A047;
 }
+
 
 body {
   font-family: Arial, sans-serif;
@@ -77,20 +78,43 @@ display: none !important;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
-  border-bottom: 0.025px solid white;
   background-color: var(--primary-background-color);
+}
+
+.action-btns {
+  display: flex; 
+  margin-right:5px;
+  padding:5px;
+  border-radius: 5px;
+  align-items: center; 
 }
 
 #add-tab-btn,
 #closetabbtn {
-  position: relative;
-  padding: 10px 10px;
   cursor: pointer;
-  border: 1px solid var(--primary-background-color);
   border-right: none;
+  padding:5px;
+  margin-right:5px;
   background-color: var(--secondary-background-color);
-  display: flex;
-  align-items: center;
+  border-radius: 50%;
+}
+
+.refresh-btn,
+.back-btn,
+.forward-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-text-color);
+  border:none;
+}
+
+.forward-btn{
+  margin-right:5px;
+}
+
+.tabs li img{
+  width:24px;
+  height:24px;
 }
 
 .tabs li {
@@ -98,13 +122,13 @@ display: none !important;
   margin-left: 1px;
   padding: 10px 15px;
   cursor: pointer;
+  margin:5px 2px;
   min-width: 0px;
   max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-radius:5px;
   border: 1px solid var(--secondary-background-color);
   background-color: var(--primary-background-color);
   display: flex;
@@ -114,12 +138,11 @@ display: none !important;
 
 .tabs li.active {
   background-color: var(--secondary-background-color);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .tabs li i {
   margin-right: 5px;
+  vertical-align: text-top;
 }
 
 .tab-panels {
@@ -154,16 +177,6 @@ iframe {
   background-color: var(--primary-background-color);
 }
 
-.refresh-btn,
-.back-btn,
-.forward-btn {
-  font-size: 18px;
-  margin-right: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  color: var(--main-text-color);
-}
 
 .input-container button.disabled {
   opacity: 0.3;

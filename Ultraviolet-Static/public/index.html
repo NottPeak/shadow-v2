@@ -5,6 +5,7 @@
     <meta name="d4fb685667e2629fa9fc5d88fa801800952a08d9" content="d4fb685667e2629fa9fc5d88fa801800952a08d9" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="CSS/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -19,27 +20,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0" />
     <script src="index.js" defer></script>
     <script src="options.js" defer></script>
-    <script async src='https://arc.io/widget.min.js#KWAdRVLN'></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCTSG4T1B6"></script>
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());  gtag('config', 'G-NCTSG4T1B6');</script>
-</head>
+    <style>
+      .material-symbols-outlined {
+        font-size:22px;
+      }
+      </style>
+      
+  </head>
 <body>
     <div class="tab-container">
         <ul class="tabs"></ul>
         <div class="input-container">
-            <i class="fas fa-plus" id="add-tab-btn"></i>
-            <i class="fas fa-times" id="closetabbtn"></i>
-            <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="refresh-btn"><i class="fas fa-sync"></i></button>
-            <button class="forward-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="action-btns">
+                <span class="material-symbols-outlined" id="add-tab-btn">add</span>
+                <span class="material-symbols-outlined" id="closetabbtn">close</span>
+                <button class="back-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+                <button class="refresh-btn"><span class="material-symbols-outlined">refresh</span></button>
+                <button class="forward-btn"><span class="material-symbols-outlined">arrow_forward</span></button>
+            </div>
             <form class="inputcontainermain" id="uv-form">
                 <input class="search" type="text" id="uv-address" placeholder="Type URL here">
                 <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
             </form>
             <button id="bookmark-btn" style="border:none; margin-right: 15px; "><span class="material-symbols-outlined" style="color:yellow">star</span></button>
                 <div class="rightcontrol">
-                    <a onclick="openNewTab()"><i class="fa-solid fa-user-ninja"></i></a>
+                    <a onclick="abtblanknew()"><i class="fa-solid fa-user-ninja"></i></a>
                     <a onclick="settingoptions()"><i class="fa-solid fa-gear"></i></a>
                     <a onclick="devtooltoggle()"><i class="fa-solid fa-wrench"></i></a>
                     <a href="https://github.com/NCCoder2/Shadow-Tabbed-V2/" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -76,10 +84,12 @@
 
     <script src="tab.js"></script>
     <script src="settings/js/panic.js"></script>
-<button onclick="parent.open('https://billing.billigerhost.com', '_blank');" style="position: fixed; bottom: 10px; right: 10px; padding: 10px 20px; background-color: rgba(153, 153, 153, 0.35); color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; font-family: 'Roboto', sans-serif;
- font-weight: 700;z-index:999999;">
-    <i class="fa-solid fa-server" style="margin-right: 5px;"></i>
-    Powered by <span style="color: #ad271f;">Billiger</span>Host
+    <button onclick="parent.open('https://billing.billigerhost.com', '_blank');" style="font-family: 'Poppins', sans-serif; position: fixed; bottom: 10px; left: 10px; padding: 10px 20px; background-color: rgba(153, 153, 153, 0.35); color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; font-family: 'Poppins', sans-serif; font-weight: 700; z-index: 999999;">
+      <i class="fa-solid fa-server" style="margin-right: 5px;"></i>
+      Powered by <span style="color: #ad271f;">Billiger</span>Host
+  </button>
+  
+  
 </button>
 </body>
 </html>

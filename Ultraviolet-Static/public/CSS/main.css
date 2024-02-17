@@ -1,18 +1,28 @@
 :root {
-  --main-background-color: #1a1a2b;
+  --primary-background-color: #0f0f17;
+  --secondary-background-color: #1a1a2b;
+  --accent-color: #E53935;
   --main-text-color: #fff;
-  --button-background-color: #3b3b5c;
-  --button-hover-background-color: #6B52A3;
-  --link-background-color: #2e2e4c;
-  --link-hover-background-color: #6B52A3;
-  --border-color: #6B52A3;
+  --search-placeholder-color: #ccc;
+  --bookmark-background-color: #5E35B1;
+  --bookmark-hover-background-color: #7E57C2;
+  --input-background-color: #1a1a2b;
+  --input-text-color: #fff;
+  --input-placeholder-color: #999;
+  --button-background-color: #5E35B1;
+  --button-text-color: #fff;
+  --button-hover-background-color: #7E57C2;
+  --cancel-button-background-color: #D32F2F;
+  --save-button-background-color: #43A047;
 }
+
+
 
 body {
   font-family: "Comfortaa", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--main-background-color);
+  background-color: var(--primary-background-color);
   color: var(--main-text-color);
   overflow: hidden;
 }
@@ -48,8 +58,8 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   width: 300px;
-  background-color: var(--button-background-color);
-  color: var(--main-text-color);
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
   margin-top: 4vh;
   margin-bottom: 3vh;
 }
@@ -72,7 +82,7 @@ body {
   align-items: center;
   text-decoration: none;
   color: var(--main-text-color);
-  background-color: var(--link-background-color);
+  background-color: var(--bookmark-background-color);
   border-radius: 5px;
   padding: 10px;
   width: 100px;
@@ -91,7 +101,7 @@ body {
 }
 
 .shortcuts a:hover {
-  background-color: var(--link-hover-background-color);
+  background-color: var(--bookmark-hover-background-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }

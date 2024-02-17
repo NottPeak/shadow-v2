@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #6B52A3;
-  --secondary-color: #2e2e4c;
-  --background-color: #1a1a2b;
+  --primary-color: #5E35B1;
+  --secondary-color: #1a1a2b;
+  --background-color: #0f0f17;
   --text-color: #fff;
-  --hover-color: #45A049;
+  --hover-color: #7E57C2;
   --font-family-primary: "Comfortaa", sans-serif;
   --font-family-secondary: "Roboto", sans-serif;
   --font-size-base: 16px;
@@ -12,6 +12,7 @@
   --border-radius: 5px;
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 body {
   font-family: var(--font-family-primary);

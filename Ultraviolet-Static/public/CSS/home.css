@@ -1,85 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
-    --main-background-color: #1a1a2b;
-    --main-text-color: #fff;
-    --discord-button-background-color: #6B52A3;
-    --discord-button-hover-background-color: #5B3A75;
-    --box-shadow-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  body {
-    font-family: "Comfortaa", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--main-background-color);
-    color: var(--main-text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  h1, h2, h3 {
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-  }
-  
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  
-  .features {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .feature-item {
-    margin-bottom: 10px;
-  }
-  
-  .feature-item:before {
-    content: "";
-  }
-  
-  .contact {
-    font-size: 20px;
-    margin-top: 30px;
-  }
-  
-  .discord-button {
-    font-family: "Roboto", sans-serif;
-    background-color: var(--discord-button-background-color);
-    color: var(--main-text-color);
-    border-radius: 5px;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 2px 4px var(--box-shadow-color);
-    font-size: 18px;
-  }
-  
-  .discord-button:hover {
-    background-color: var(--discord-button-hover-background-color);
-  }
-  
-  .discord-button i {
-    margin-right: 5px;
-  }
-  
-  ul {
-    list-style-type: none;
-  }
-  
+  --primary-background-color: #0f0f17;
+  --secondary-background-color: #1a1a2b;
+  --accent-color: #E53935;
+  --main-text-color: #fff;
+  --search-placeholder-color: #ccc;
+  --bookmark-background-color: #5E35B1;
+  --bookmark-hover-background-color: #7E57C2;
+  --input-background-color: #1a1a2b;
+  --input-text-color: #fff;
+  --input-placeholder-color: #999;
+  --button-background-color: #5E35B1;
+  --button-text-color: #fff;
+  --button-hover-background-color: #7E57C2;
+  --cancel-button-background-color: #D32F2F;
+  --save-button-background-color: #43A047;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--main-text-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  color: var(--accent-color);
+  font-size: 36px;
+}
+
+.description {
+  color: var(--main-text-color);
+  font-size: 20px;
+}
+
+.features {
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feature-item {
+  margin-bottom: 20px;
+  color: var(--main-text-color);
+  font-size: 18px;
+}
+
+.feature-item i {
+  margin-right: 10px;
+}
+
+.contact {
+  color: var(--main-text-color);
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.contact a {
+  color: var(--accent-color);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.discord-button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.discord-button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.discord-button i {
+  margin-right: 10px;
+}
+
+/* Footer paragraph */

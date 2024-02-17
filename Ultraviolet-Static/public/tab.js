@@ -126,7 +126,7 @@ function updateTabTitleFromIframe(iframe) {
         const src = iframe.src;
         const encodedurl = src.split('/uv/service/')[1];
         const decodedsrc = __uv$config.decodeUrl(encodedurl);
-        const imgsrc = `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${decodedsrc}&size=20`;
+        const imgsrc = `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${decodedsrc}&size=32`;
         const faviconsrc = `<img style="margin-right: 1px;" src="${imgsrc}">`;
         if (src.includes('home.html') || src.includes('main.html')) {
         } else { 
@@ -251,7 +251,7 @@ function addBookmark(title, link) {
         }
     } else {
         const decodedlink = link;
-        const imgsrc = `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${decodedlink}&size=26`;
+        const imgsrc = `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${decodedlink}&size=32`;
         const faviconlink = `<img style="margin-right: 5px;" src="${imgsrc}">`;
         bookmark.innerHTML = faviconlink + title;
         const encodedlink = `/uv/service/` + __uv$config.encodeUrl(link);
