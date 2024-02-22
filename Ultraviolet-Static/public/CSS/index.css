@@ -49,25 +49,25 @@ display: none !important;
   align-items: center;
   padding: 5px;
   background-color: var(--secondary-background-color);
-  border-radius: 5px;
+  border-radius: 50%;
 }
 
 .search {
-  flex-grow: 0;
-  padding: 12.5px 10px;
+  flex-grow: 1;
+  padding: 8px 10px;
   border: none;
-  width: 95%;
-  border-radius: 5px;
+  width: 97%;
+  border-radius: 50px;
   background-color: var(--secondary-background-color);
   color: var(--main-text-color);
   outline: none;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 .search:focus::placeholder {
   color: transparent;
   color: var(--search-placeholder-color);
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 .tabs {
