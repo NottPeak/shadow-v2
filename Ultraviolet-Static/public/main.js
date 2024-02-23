@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const url = search("youtube.com", "https://www.google.com/search?q=%s");
         location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
     });
-    const gpt = document.getElementById('gpt');
+    const gpt = document.getElementById('GPT');
     gpt.addEventListener('click', async (event) => {
         event.preventDefault();
         await registerServiceWorker;
-        const url = search("chatgpt-app.techwithanirudh.repl.co/login", "https://www.google.com/search?q=%s");
+        const url = search("chat.openai.com", "https://www.google.com/search?q=%s");
         location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
     });
     const vs = document.getElementById('vs');
