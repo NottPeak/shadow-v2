@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html id="html">
+
 <head>
   <title>Shadow Settings</title>
   <link rel="stylesheet" type="text/css" href="/CSS/settings.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="/menu.js"> </script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <script src="js/themes.js"></script>
+  <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/e-commerce-207/1024/settings-512.png">
+  <script src="js/themes.js"></script>
 </head>
+
 <body class="settingsbody">
   <div class="container">
     <div class="settings-section">
       <h2 class="section-title">Search Engine</h2>
-      <p>This will be the search engine that is used when searching the web using proxies. Either choose one of our pre-made options, or set your own!</p>
+      <p>This will be the search engine that is used when searching the web using proxies. Either choose one of our
+        pre-made options, or set your own!</p>
       <select id="searchEngineDropdown" class="input-field">
         <option value="custom">Custom</option>
         <option value="google">Google</option>
@@ -27,16 +29,19 @@
       </select>
       <div id="customsearchengdiv" style="display: none;">
         <p>Enter the root of the search below. <br> Example: https://www.google.com/search?q=</p>
-        <input id="searchengine" class="input-field" placeholder="Enter Search Engine Root" onkeyup="toggleCustomSearch()" />
+        <input id="searchengine" class="input-field" placeholder="Enter Search Engine Root"
+          onkeyup="toggleCustomSearch()" />
       </div>
-    </div>            
+    </div>
     <div class="settings-section">
       <div class="section-title">Launch About:blank</div>
       <div class="section-content">
-          <p>Click the button to open a new tab with about:blank. About:Blank opens this site as an about:blank, and you can browse this site all you want. Now instead of this website appearing in your histroy, it will just show about:blank</p>
+        <p>Click the button to open a new tab with about:blank. About:Blank opens this site as an about:blank, and you
+          can browse this site all you want. Now instead of this website appearing in your histroy, it will just show
+          about:blank</p>
         <button class="icon-button"><i class="fas fa-rocket"></i> Launch</button>
-        </div>
-    </div>         
+      </div>
+    </div>
     <div class="settings-section">
       <h2 class="section-title">Tab Cloak</h2>
       <div class="section-content">
@@ -74,7 +79,7 @@
           <button class="icon-button" onclick="changetheme('default'); window.location.reload();">Default</button>
         </div> <br>
       </div>
-    </div>    
+    </div>
     <!--- <div class="settings-section">
       <h2 class="section-title">Bare Server Switch</h2>
       <div class="section-content">
@@ -98,7 +103,7 @@
           </div>
         </div>
         <!-- Server 2 -->
-      <!--- <div class="box">
+    <!--- <div class="box">
           <div class="box-header">
             <h3>Bare Server 2 (Nowgg Enabled)</h3>
           </div>
@@ -113,7 +118,7 @@
             <button class="setbare" onclick="changeBare('https://use.astroid.wtf/bare/');">Choose Bare</button>
           </div>
         </div> -->
-        <!--Custom server--> <!----
+    <!--Custom server--> <!----
         <div class="box">
           <div class="box-header">
             <h3>Custom server</h3>
@@ -132,7 +137,7 @@
         </div>
       </div>
     </div> -->
-  
+
   </div>
   <script src="script.js"></script>
   <script src="js/themes.js"></script>
@@ -144,7 +149,7 @@
   function setSearchEngine(value) {
     localStorage.setItem("searchengine", value);
   }
-  
+
   function toggleCustomSearch() {
     var customDiv = document.getElementById("customsearchengdiv");
     var searchEngineDropdown = document.getElementById("searchEngineDropdown");
@@ -179,12 +184,12 @@
       }
     }
   }
-  
+
   document.getElementById("searchEngineDropdown").addEventListener("change", toggleCustomSearch);
-    toggleCustomSearch();
-  </script>
-  
-  
+  toggleCustomSearch();
+</script>
+
+
 <script>
   function openNewTab() {
     const currentURL = window.location.origin;
@@ -192,7 +197,7 @@
     newTab.document.write('<html><body style="margin: 0; padding: 0;"><embed src="' + currentURL + '" style="width: 100%; height: 100%;"></embed></body></html>');
     newTab.document.close();
   }
-  
+
   function openNewWindow() {
     const currentURL = window.location.origin;
     const newWindow = window.open('about:blank', '_blank', 'width=800,height=600');
@@ -211,102 +216,104 @@
 <script src="js/settings.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  var storedTheme = localStorage.getItem("themes");
-  var defaultCSSPath = "/CSS/index.css";
-  var cssLink = document.getElementById("themeStylesheet");
-  cssLink.href = storedTheme || defaultCSSPath;
+  document.addEventListener("DOMContentLoaded", function () {
+    var storedTheme = localStorage.getItem("themes");
+    var defaultCSSPath = "/CSS/index.css";
+    var cssLink = document.getElementById("themeStylesheet");
+    cssLink.href = storedTheme || defaultCSSPath;
 
-  window.addEventListener("storage", function(event) {
-    if (event.key === "themes" && event.newValue !== cssLink.href) {
-      cssLink.href = event.newValue;
-    }
+    window.addEventListener("storage", function (event) {
+      if (event.key === "themes" && event.newValue !== cssLink.href) {
+        cssLink.href = event.newValue;
+      }
+    });
   });
-});
 </script>
 
 <div id="content"></div>
 <script src="menu.js"> </script>
 <script src="tab.js"> </script>
 <script>
-      let toggleState = false;
-    function devtooltoggle() {
-      if (toggleState) {
-        eruda.hide();
-        eruda.destroy();
-      } else {
-        var script = document.createElement('script');
-        script.src = "//cdn.jsdelivr.net/npm/eruda";
-        document.body.appendChild(script);
-        script.onload = function () {
-          eruda.init();
-          eruda.show();
-      }}
-      toggleState = !toggleState;
-    };
+  let toggleState = false;
+  function devtooltoggle() {
+    if (toggleState) {
+      eruda.hide();
+      eruda.destroy();
+    } else {
+      var script = document.createElement('script');
+      script.src = "//cdn.jsdelivr.net/npm/eruda";
+      document.body.appendChild(script);
+      script.onload = function () {
+        eruda.init();
+        eruda.show();
+      }
+    }
+    toggleState = !toggleState;
+  };
 
-function Fullscreen() {
-  const canvas = document.getElementById('html');
-  if (canvas.requestFullscreen) {
-    canvas.requestFullscreen();
-  } else if (canvas.mozRequestFullScreen) {
-    canvas.mozRequestFullScreen();
-  } else if (canvas.webkitRequestFullscreen) {
-    canvas.webkitRequestFullscreen();
-  } else if (canvas.msRequestFullscreen) {
-    canvas.msRequestFullscreen();
+  function Fullscreen() {
+    const canvas = document.getElementById('html');
+    if (canvas.requestFullscreen) {
+      canvas.requestFullscreen();
+    } else if (canvas.mozRequestFullScreen) {
+      canvas.mozRequestFullScreen();
+    } else if (canvas.webkitRequestFullscreen) {
+      canvas.webkitRequestFullscreen();
+    } else if (canvas.msRequestFullscreen) {
+      canvas.msRequestFullscreen();
+    }
   }
-}
 
 
-function navigateForward() {
-  window.history.forward();
-}
+  function navigateForward() {
+    window.history.forward();
+  }
 
 
-function navigateBackward() {
-  window.history.back();
-}
+  function navigateBackward() {
+    window.history.back();
+  }
 
 
-function reloadIframe() {
-  location.reload();
-}
+  function reloadIframe() {
+    location.reload();
+  }
 
-function openDiscord() {
- location.href = '/uv/service/hvtrs8%2F-dksaopd%2Ccmm-ilvktg%2Fr9j3fTJAOA';
-}
+  function openDiscord() {
+    location.href = '/uv/service/hvtrs8%2F-dksaopd%2Ccmm-ilvktg%2Fr9j3fTJAOA';
+  }
 
-function openIframeInNewTab() {
+  function openIframeInNewTab() {
     const iframeSrc = location.href;
     window.open(iframeSrc, '_blank');
   }
 
 
-function openSettings() {
-  window.location.href="/settings/"
-}
+  function openSettings() {
+    window.location.href = "/settings/"
+  }
 
-function openNewTab() {
+  function openNewTab() {
     const currentURL = window.location.href;
     const newTab = window.open('about:blank', '_blank');
     newTab.document.write('<html><body style="margin: 0; padding: 0;"><embed src="' + currentURL + '" style="width: 100%; height: 100%;"></embed></body></html>');
     newTab.document.close();
   }
-  
+
   function openNewWindow() {
     const currentURL = window.location.href;
     const newWindow = window.open('about:blank', '_blank', 'width=800,height=600');
     newWindow.document.write('<html><body style="margin: 0; padding: 0;"><embed src="' + currentURL + '" style="width: 100%; height: 100%;"></embed></body></html>');
     newWindow.document.close();
   }
-  
+
 </script>
 
 <script>
-  document.getElementById("uv-address").addEventListener("input", function() {
-  this.suggestions = [];
-});
+  document.getElementById("uv-address").addEventListener("input", function () {
+    this.suggestions = [];
+  });
 
-</script> 
+</script>
+
 </html>

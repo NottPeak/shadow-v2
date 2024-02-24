@@ -183,22 +183,22 @@ iframe {
   cursor: default;
 }
 
-.rightcontrol {
-  position: relative;
-}
 
 .rightcontrol a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 8px;
-  color: var(--main-text-color);
-  background-color: var(--secondary-background-color);
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  background-color: transparent;
+  margin:0;
+  cursor:pointer;
+  padding:0;
 }
 
-.rightcontrol a:hover {
-  background-color: var(--accent-color);
+.rightcontrol a span {
+  border: 1px solid var(--main-text-color);
+  padding:5px;
+  font-size:20px;
+  margin:2px;
+  cursor:pointer;
+  color:var(--accent-color);
+  border-radius: 5px;
 }
 
 .rightcontrol i {
@@ -217,7 +217,6 @@ iframe {
   align-items: center;
   height: 32px;
   background-color: var(--secondary-background-color);
-  /* Darker background color for the bookmarks bar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 10px;
   flex-wrap: wrap;
@@ -254,6 +253,17 @@ background-color: var(--bookmark-hover-background-color);
 
 #bookmark-btn {
   background-color: transparent;
+  margin:0;
+  border: 1px solid var(--main-text-color);
+  padding:0;
+}
+
+#bookmark-btn span{
+  border: 1px solid var(--main-text-color);
+  padding:5px;
+  font-size:20px;
+  color:var(--accent-color);
+  border-radius: 5px;
 }
 
 /* Additional CSS for bookmark icons */

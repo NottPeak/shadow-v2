@@ -71,9 +71,6 @@ async function isBlocked(url) {
   };
   
   // Add the main script in the <head> tags
-  const jsdelivr = document.createElement('script');
-  jsdelivr.setAttribute('src', 'https://cdn.jsdelivr.net/gh/3kh0/3kh0.github.io/js/main.js');
-  document.head.append(jsdelivr);
   
   // Collect Tab Cloak data from local storage
   var tab = localStorage.getItem('tab');
