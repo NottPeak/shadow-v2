@@ -192,7 +192,6 @@ iframe {
 }
 
 .rightcontrol a span {
-  border: 1px solid var(--main-text-color);
   padding:5px;
   font-size:20px;
   margin:2px;
@@ -259,7 +258,6 @@ background-color: var(--bookmark-hover-background-color);
 }
 
 #bookmark-btn span{
-  border: 1px solid var(--main-text-color);
   padding:5px;
   font-size:20px;
   color:var(--accent-color);
