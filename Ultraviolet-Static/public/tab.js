@@ -178,17 +178,17 @@ inputField.addEventListener('keydown', function (event) {
 closeTabBtn.addEventListener('click', closeTab);
 
 backBtn.addEventListener('click', function () {
-    const iframe = document.querySelector(`#${currentTabPanelId} iframe`);
+    const iframe =  document.querySelector('.tab-panel.active');
     iframe.contentWindow.history.back();
 });
 
 refreshBtn.addEventListener('click', function () {
-    const iframe = document.querySelector(`#${currentTabPanelId} iframe`);
+    const iframe =  document.querySelector('.tab-panel.active');
     iframe.contentWindow.location.reload();
 });
 
 forwardBtn.addEventListener('click', function () {
-    const iframe = document.querySelector(`#${currentTabPanelId} iframe`);
+    const iframe = document.querySelector('.tab-panel.active');
     iframe.contentWindow.history.forward();
 });
 
