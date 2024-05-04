@@ -9,6 +9,12 @@
 function search(input, template) {
   let url;
 
+    if((input.includes("now.gg") || input.includes("nowgg")) && confirm("Would you like to play roblox?")) {  
+      nowgg();
+      return("https://nowgg.nl/apps/roblox-corporation/5349/roblox.html");
+    }
+  
+
   try {
     url = new URL(input);
     if (url.hostname.includes(".")) {
