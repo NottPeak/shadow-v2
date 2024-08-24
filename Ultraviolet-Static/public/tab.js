@@ -183,7 +183,7 @@ backBtn.addEventListener('click', function () {
 });
 
 refreshBtn.addEventListener('click', function () {
-    const iframe =  document.querySelector('.tab-panel.active');
+    const iframe =  document.querySelector('.tab-panel.active').children[0];
     iframe.contentWindow.location.reload();
 });
 
