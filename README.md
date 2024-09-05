@@ -1,5 +1,7 @@
 # 🌑 Shadow Proxy 🌑
 
+Shadow v2 will be archived as of 9/6/24, we have moved on to [Shadow v3](https://github.com/shadowdevlabs/shadowv3). 
+
 Welcome to Shadow Proxy - A tabbed proxy designed to make your internet experience enchanced to the next level with a sleek dark blue theme, and tons of more features!
 
 ## Features
